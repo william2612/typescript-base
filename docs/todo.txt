@@ -1,0 +1,1 @@
+- shouldn't a module be only a property of a lecture?
