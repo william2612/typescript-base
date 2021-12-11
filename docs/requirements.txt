@@ -8,6 +8,8 @@ Use cases
 - Create course
 - Create module
 - Create lecture
+- Change order of a lecture in a module
+- Change order of a module in a course?
 - Update user
 - Update course
 - Update module
