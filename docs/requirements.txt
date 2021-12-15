@@ -1,0 +1,16 @@
+Casos de uso:
+
+-Cadastro de usuário
+-Login do usuário
+-Matrícula do usuário no curso
+-Marcar uma aula como concluída
+-Selecionar aula do curso
+
+-Criar um curso
+-Criar um módulo
+-Criar uma aula
+
+-Alterar usuário
+-Alterar curso
+-Alterar módulo
+-Alterar aula

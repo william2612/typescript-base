@@ -29,3 +29,4 @@ describe('Course', () => {
         expect(course.modules.includes(module)).toBeTruthy()
     })
 })
+
