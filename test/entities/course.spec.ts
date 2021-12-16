@@ -18,6 +18,16 @@ describe('Course', () => {
     expect(module.numberOfLectures).toBe(1)
   })
 
+  it('should not be able to have two lectures with same name in a module', () => {
+    const module = new Module('Fundamentals')
+    const lecture: Lecture = new Lecture('Branching', 'https://youtube.com/1234')
+    const otherLecture: Lecture = new Lecture('Branching', 'https://youtube.com/3456')
+    module.add(lecture)
+    module.add(otherLecture)
+    expect(module.includes(lecture)).toBeTruthy()
+    expect(module.includes(otherLecture)).toBeFalsy()
+  })
+
   it('should be able to add modules to courses', () => {
     const course = new Course('azure-devops',
       'Continuous Delivery and DevOps with Azure DevOps: Source Control with Git')
