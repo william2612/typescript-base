@@ -7,8 +7,7 @@ describe('Course', () => {
       description: 'Branching'
     }
     module.add(lecture)
-    expect(module.lectures.length).toBe(1)
-    expect(module.lectures.includes(lecture)).toBeTruthy()
+    expect(module.includes(lecture)).toBeTruthy()
   })
 
   it('should be able to add modules to courses', () => {
@@ -20,7 +19,6 @@ describe('Course', () => {
     }
     module.add(lecture)
     course.add(module)
-    expect(course.modules.length).toBe(1)
-    expect(course.modules.includes(module)).toBeTruthy()
+    expect(course.includes(module)).toBeTruthy()
   })
 })
