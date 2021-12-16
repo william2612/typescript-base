@@ -27,4 +27,21 @@ describe('Module', () => {
     expect(module.includes(lecture)).toBeTruthy()
     expect(module.includes(otherLecture)).toBeFalsy()
   })
+
+  it('should be able to rearrange lectures order', () => {
+    const module = new Module('Fundamentals')
+    const branching: Lecture = new Lecture('Branching', 'https://youtube.com/branching')
+    const commiting: Lecture = new Lecture('Commiting', 'https://youtube.com/commiting')
+    const pushing: Lecture = new Lecture('Pushing', 'https://youtube.com/pushing')
+
+    module.add(branching)
+    module.add(commiting)
+    module.add(pushing)
+
+    module.move(branching, 3)
+
+    expect(module.position(commiting)).toBe(1)
+    expect(module.position(pushing)).toBe(2)
+    expect(module.position(branching)).toBe(3)
+  })
 })
