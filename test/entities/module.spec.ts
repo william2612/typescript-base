@@ -28,7 +28,7 @@ describe('Module', () => {
     expect(module.includes(otherLecture)).toBeFalsy()
   })
 
-  it('should be able to rearrange lectures order', () => {
+  it('should be able to rearrange the order of lectures', () => {
     const module = new Module('Fundamentals')
     const branching: Lecture = new Lecture('Branching', 'https://youtube.com/branching')
     const commiting: Lecture = new Lecture('Commiting', 'https://youtube.com/commiting')
