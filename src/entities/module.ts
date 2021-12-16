@@ -26,7 +26,7 @@ export class Module {
   }
 
   move (lecture: Lecture, to: number): void {
-    if (to > this.lectures.length) {
+    if (to > this.lectures.length || to <= 0) {
       return
     }
     const from = this.position(lecture)
