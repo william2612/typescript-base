@@ -12,12 +12,12 @@ export class Module {
   }
 
   add (lecture: Lecture): void {
-    if (!this.includesLectureWithSameName(lecture)) {
+    if (!this.includesLectureWithSameDescription(lecture)) {
       this.lectures.push(lecture)
     }
   }
 
-  private includesLectureWithSameName (lecture: Lecture): boolean {
+  private includesLectureWithSameDescription (lecture: Lecture): boolean {
     return this.lectures.find(lec => lec.description === lecture.description) !== undefined
   }
 
