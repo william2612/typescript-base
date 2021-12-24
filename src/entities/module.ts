@@ -30,7 +30,12 @@ export class Module {
       return
     }
     const from = this.position(lecture)
-    this.lectures.splice(to - 1, 0, this.lectures.splice(from - 1, 1)[0])
+    this.moveInArray(this.lectures, from, to)
+  }
+
+  private moveInArray<T> (array: Array<T>, from: number, to: number): void {
+    const removedElement: T = array.splice(from - 1, 1)[0]
+    array.splice(to - 1, 0, removedElement)
   }
 
   position (lecture: Lecture): number {
