@@ -7,5 +7,5 @@ const express_1 = __importDefault(require("express"));
 const port = process.env.PORT || 8080;
 const app = express_1.default();
 app.get('/', (req, res) => { res.send('Hello World from theWiseDev in Azure!!!'); });
-app.listen(port, () => { console.log('Our App Is Up And Running on Azure.'); });
+app.listen(port, () => { console.log('Our App Is Up And Running on Azureeee.'); });
 module.exports = app;
