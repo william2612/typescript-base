@@ -1,8 +1,8 @@
 import { Lecture } from './lecture'
-
+import { moveInArray } from './util'
 export class Module {
   private readonly lectures: Array<Lecture> = []
-  private name: string
+  public readonly name: string
   constructor (name: string) {
     this.name = name
   }
@@ -26,17 +26,12 @@ export class Module {
   }
 
   move (lecture: Lecture, to: number): void {
-    if (to > this.lectures.length || to <= 0) {
-      return
-    }
+    
     const from = this.position(lecture)
-    this.moveInArray(this.lectures, from - 1, to - 1)
+    moveInArray(this.lectures, from - 1, to - 1)
   }
 
-  private moveInArray<T> (array: Array<T>, from: number, to: number): void {
-    const element = array.splice(from, 1)[0]
-    array.splice(to, 0, element)
-  }
+  
 
   position (lecture: Lecture): number {
     const lectureInModule = this.lectures.find(lec => lec.equals(lecture))
@@ -45,4 +40,5 @@ export class Module {
     }
     return this.lectures.indexOf(lectureInModule) + 1
   }
+  
 }
