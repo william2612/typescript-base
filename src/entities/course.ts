@@ -9,11 +9,17 @@ export class Course {
     this.reference = reference
     this.description = description
   }
-
-  add (module: Module): void {
-    this.modules.push(module)
+  get numberOfModules(): number{
+    return this.modules.length
   }
 
+  add (module: Module): void {
+    if(!this.includesLectureWithSameName(module))
+    this.modules.push(module)
+  }
+  private includesLectureWithSameName (module: Module): boolean {
+    return this.modules.find(mod => mod.name === module.name) !== undefined
+  }
   includes (module: Module): boolean {
     return this.modules.includes(module)
   }
