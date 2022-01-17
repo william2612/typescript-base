@@ -85,4 +85,5 @@ describe('Module', () => {
     expect(module.position(commiting)).toBe(2)
     expect(module.position(pushing)).toBe(3)
   })
+  
 })
