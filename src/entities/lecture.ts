@@ -1,3 +1,5 @@
+import { Material } from "./material"
+
 export class Lecture {
   readonly description: string
   readonly videoUrl: string
@@ -10,5 +12,11 @@ export class Lecture {
   equals (other: Lecture): boolean {
     return this.description === other.description &&
       this.videoUrl === other.videoUrl
+  }
+  add(material: Material):void{
+    
+  }
+  includes (material: Material):boolean{
+    return true
   }
 }
